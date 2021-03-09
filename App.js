@@ -4,27 +4,25 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home/Home';
+import { Platform, StyleSheet } from 'react-native';
+import Header from './components/Header/Header';
 
 const Stack = createStackNavigator();
 
-export default const App = () => {
+const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="first-rnative">
+    <NavigationContainer style={{ paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0}}>
+      <Stack.Navigator initialRouteName="first-rnative" headerMode='screen'>
         <Stack.Screen
           name="first-rnative"
           component={Home} 
+          options={{
+            header: () => <Header headerDisplay="first-rnative" />
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
