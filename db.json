@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "title": "Release new course",
+      "date": "2018-06-15T00:00:00.000Z",
+      "id": "145x3n52"
+    },
+    {
+      "title": "Leave for holiday",
+      "date": "2018-07-15T00:00:00.000Z",
+      "id": "985ft32"
+    },
+    {
+      "title": "Come back from holiday",
+      "date": "2018-08-15T00:00:00.000Z",
+      "id": "4298xcn2"
+    },
+  ]
+}
